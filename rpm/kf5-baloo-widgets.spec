@@ -68,12 +68,12 @@ that use %{name}.
 
 
 # >> build post
-%kf5_make_install
 # << build post
 
 %install
 rm -rf %{buildroot}
 # >> install pre
+%kf5_make_install
 # << install pre
 
 # >> install post
