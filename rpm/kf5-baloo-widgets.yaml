@@ -1,0 +1,64 @@
+Name         : kf5-baloo-widgets
+Version      : 4.97.0
+Release      : 1
+Group        : System/Base
+License      : LGPLv2+
+Summary      : A Tier 3 KDE Frameworks 5 module that provides widgets built on top of Baloo
+Description  : |
+  A Tier 3 KDE Frameworks 5 module that provides widgets built on top of Baloo.
+URL          : http://www.kde.org
+SetupOptions : -q -n %{name}-%{version}/upstream
+
+Sources:
+    - "%{name}-%{version}.tar.xz"
+
+RpmLintIgnore:
+    - devel-file-in-non-devel-package
+    - no-changelogname-tag
+    - library-without-ldconfig-postin
+    - library-without-ldconfig-postun
+
+Configure    : none
+Builder      : none
+
+PkgBR:
+    - kf5-rpm-macros
+    - extra-cmake-modules
+    - kf5-kdelibs4support-devel
+    - kf5-ki18n-devel
+    - kf5-kservice-devel
+    - libxapian-devel
+    - kf5-kfilemetadata-devel
+    - kf5-baloo-devel
+    - kf5-umbrella
+PkgConfigBR:
+    - Qt5Core
+    - Qt5DBus
+    - Qt5Xml
+    - Qt5Network
+    - Qt5Gui
+    - Qt5Widgets
+    - Qt5Concurrent
+    - Qt5Test
+Requires:
+    - kf5-filesystem
+
+RequiresPost:
+    - /sbin/ldconfig
+RequiresPostUn:
+    - /sbin/ldconfig
+
+Files:
+    - "%{_kf5_libdir}/*.so.*"
+
+SubPackages:
+    - Name: devel
+      Group: Development/Libraries
+      Summary: Development files for %{name}
+      Description: |
+        The %{name}-devel package contains the files necessary to develop applications
+        that use %{name}.
+      Files:
+          - "%{_kf5_libdir}/*.so"
+          - "%{_kf5_libdir}/cmake/BalooWidgets"
+          - "%{_kf5_includedir}/baloo"
