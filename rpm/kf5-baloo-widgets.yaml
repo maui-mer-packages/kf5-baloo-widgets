@@ -62,5 +62,5 @@ SubPackages:
         that use %{name}.
       Files:
           - "%{_kf5_libdir}/*.so"
-          - "%{_kf5_libdir}/cmake/BalooWidgets"
+          - "%{_kf5_libdir}/cmake/KF5BalooWidgets"
           - "%{_includedir}/baloo"
