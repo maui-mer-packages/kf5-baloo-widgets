@@ -89,6 +89,6 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 %{_kf5_libdir}/*.so
 %{_kf5_libdir}/cmake/KF5BalooWidgets
-%{_includedir}/baloo
+%{_kf5_includedir}/BalooWidgets
 # >> files devel
 # << files devel
