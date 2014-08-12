@@ -1,5 +1,5 @@
-Name         : kf5-baloo-widgets
-Version      : 4.98.0
+Name         : baloo-widgets
+Version      : 5.0.0
 Release      : 1
 Group        : System/Base
 License      : LGPLv2+
@@ -24,13 +24,12 @@ Builder      : none
 PkgBR:
     - kf5-rpm-macros
     - extra-cmake-modules
-    - kf5-kdelibs4support-devel
-    - kf5-ki18n-devel
-    - kf5-kservice-devel
+    - kdelibs4support-devel
+    - ki18n-devel
+    - kservice-devel
     - libxapian-devel
-    - kf5-kfilemetadata-devel
-    - kf5-baloo-devel
-    - kf5-umbrella
+    - kfilemetadata-devel
+    - baloo-devel
 PkgConfigBR:
     - Qt5Core
     - Qt5DBus
@@ -62,5 +61,5 @@ SubPackages:
         that use %{name}.
       Files:
           - "%{_kf5_libdir}/*.so"
-          - "%{_kf5_libdir}/cmake/KF5BalooWidgets"
+          - "%{_kf5_cmakedir}/KF5BalooWidgets"
           - "%{_kf5_includedir}/BalooWidgets"
