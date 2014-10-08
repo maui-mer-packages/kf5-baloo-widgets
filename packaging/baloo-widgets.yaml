@@ -7,7 +7,6 @@ Summary      : A Tier 3 KDE Frameworks 5 module that provides widgets built on t
 Description  : |
   A Tier 3 KDE Frameworks 5 module that provides widgets built on top of Baloo.
 URL          : http://www.kde.org
-SetupOptions : -q -n %{name}-%{version}/upstream
 
 Sources:
     - "%{name}-%{version}.tar.xz"
