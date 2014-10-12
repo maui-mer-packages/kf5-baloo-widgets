@@ -49,6 +49,7 @@ RequiresPostUn:
     - /sbin/ldconfig
 
 Files:
+    - "%{_kf5_bindir}/*"
     - "%{_kf5_libdir}/*.so.*"
 
 SubPackages:

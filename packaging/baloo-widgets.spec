@@ -80,6 +80,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
+%{_kf5_bindir}/*
 %{_kf5_libdir}/*.so.*
 # >> files
 # << files
