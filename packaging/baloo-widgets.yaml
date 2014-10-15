@@ -10,6 +10,8 @@ URL          : http://www.kde.org
 
 Sources:
     - "%{name}-%{version}.tar.xz"
+Patches:
+    - 0001-Remove-double-slash.patch
 
 RpmLintIgnore:
     - devel-file-in-non-devel-package

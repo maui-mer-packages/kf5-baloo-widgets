@@ -1,0 +1,24 @@
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Wed, 15 Oct 2014 15:46:15 +0200
+Subject: Remove double slash
+
+Fixes build Maui issue:
+
+/usr/lib/rpm/debugedit: canonicalization unexpectedly shrank by one character
+---
+ src/kcommentwidget_p.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/kcommentwidget_p.h b/src/kcommentwidget_p.h
+index 6444b3c..ecb7f51 100644
+--- a/src/kcommentwidget_p.h
++++ b/src/kcommentwidget_p.h
+@@ -22,7 +22,7 @@
+ #define KCOMMENT_WIDGET
+ 
+ #include <QtCore/QString>
+-#include <QtWidgets//QWidget>
++#include <QtWidgets/QWidget>
+ 
+ class QLabel;
+ 
