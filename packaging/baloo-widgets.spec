@@ -10,7 +10,7 @@ Name:       baloo-widgets
 
 Summary:    A Tier 3 KDE Frameworks 5 module that provides widgets built on top of Baloo
 Version:    5.0.90
-Release:    1
+Release:    2
 Group:      System/Base
 License:    LGPLv2+
 URL:        http://www.kde.org
